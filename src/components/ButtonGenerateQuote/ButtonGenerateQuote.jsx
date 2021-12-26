@@ -8,9 +8,9 @@ export const ButtonGenerateQuote = (props) => {
     const classes = useStyles()
     const { click } = props
     return (
-        <Button endIcon={icon} className={classes.root} onClick={click}>
-            Random
-        </Button>
+            <Button endIcon={icon} onClick={click} className={classes.root}>
+                Random
+            </Button>
     )
 }
 
