@@ -1,23 +1,30 @@
 import { useEffect } from "react"
+import { useState } from "react"
 
 
-import {Button} from "@material-ui/core"
-import {Icon} from "@material-ui/core"
+import ButtonGenerateQuote from "./components/ButtonGenerateQuote"
+import QuotesInfo from "./components/QuotesInfo"
 
 import {randomQuote} from "./API/quotes"
 
 
 
 function App() {
-  const AutoRenew = <Icon>autorenew</Icon>
+  const [data, setData] = useState("")
 
-  const Pepe = async () => {
+  const getData = async () => {
     const data = await randomQuote()
-    console.log(data)
+    return setData(data)
   }
+
+  useEffect(() => {
+    getData()
+  }, [])
+
   return (
     <div className="App">
-      <Button endIcon={AutoRenew} onClick={Pepe}>Random</Button>
+      <ButtonGenerateQuote click={() => getData()}/>
+      <QuotesInfo data={data}/>
     </div>
   )
 }
