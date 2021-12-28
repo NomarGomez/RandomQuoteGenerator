@@ -7,9 +7,11 @@ export function randomQuote() {
     return new Promise((success, reject) => {
         get(`${API_URL}${API_VERSION}quotes/random`)
             .then(({ data }) => {
+                console.log("API correctly fetching")
                 success(data.data[0]);
             })
             .catch((error) => {
+                console.log("API Error")
                 reject(error);
             });
     });

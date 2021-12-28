@@ -22,7 +22,7 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div>
       <ButtonGenerateQuote click={() => getData()}/>
       <QuotesInfo data={data}/>
     </div>
