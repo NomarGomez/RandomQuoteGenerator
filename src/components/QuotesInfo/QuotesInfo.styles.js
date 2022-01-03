@@ -24,6 +24,7 @@ export const useStyles = makeStyles(theme => ({
     },
     author: {
         fontSize: "1.3rem",
+        textTransform: "capitalize",
         minWidth: "100%",
         height:"8rem"
     }

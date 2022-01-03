@@ -22,12 +22,12 @@ export const QuotesInfo = (props) => {
         <Box className={classes.card}>
             <CardContent className={classes.infoRoot}>
                 <Typography className={classes.info}>
-                    {text}
+                    " {text} "
                 </Typography>
             </CardContent>
             <CardHeader
              className={classes.authorRoot}
-             title={<Button className={classes.author}>{author}</Button>}
+             title={<Button className={classes.author}>- {author}</Button>}
              subheader={genre}
             />
         </Box>
